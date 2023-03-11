@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "GLua",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#objects"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.glua",
+				"match": "\\b(if|while|for|return)\\b"
+			},
+			{
+				"name": "keyword.other",
+				"match": "\\b(function)\\b"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "entity.name.class.glua",
+				"match": "\\b(?!if|then|else|end|do|true|false|local)(_|[A-Z]|[a-z]+)[a-zA-Z0-9_]*(?!\\()\\b"
+			}]
+		},
+		"objects": {
+			"patterns": [{
+				"name": "entity.name.class.glua",
+				"match": "\\b\\w+(?=:)"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "punctuation",
+				"match": "(\\(|\\)|,|\\[|\\]|\\{|\\})"
+			},
+			{
+				"name": "keyword.operator",
+				"match": "(:|\\.)"
+			}]
+		}
+	},
+	"scopeName": "lua.extended",
+	"injectionSelector": "L:source.lua"
+}
