@@ -4,6 +4,7 @@
   "description": "Extending GLua with more grammars",
   "version": "1.0.0",
   "publisher": "Vaqxai",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.76.0"
   },
