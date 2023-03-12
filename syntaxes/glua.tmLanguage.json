@@ -61,6 +61,16 @@
 				"begin": "--\\[\\[",
 				"end": "\\]\\]",
 				"match": "(?s)."
+			},
+			{
+				"name": "comment.line.c-style.glua",
+				"match": "\\/\\/.*$"
+			},
+			{
+				"name": "comment.block.c-style.glua",
+				"begin": "\\/\\*",
+				"end": "\\*\\/",
+				"match": "(?s)."
 			}]
 		}
 	},
