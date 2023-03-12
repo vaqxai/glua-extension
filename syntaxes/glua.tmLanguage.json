@@ -13,6 +13,9 @@
 		},
 		{
 			"include": "#operators"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
@@ -46,6 +49,18 @@
 			{
 				"name": "keyword.operator",
 				"match": "(:|\\.)"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.double-dash.glua",
+				"match": "--.*$"
+			},
+			{
+				"name": "comment.block.glua",
+				"begin": "--\\[\\[",
+				"end": "\\]\\]",
+				"match": "(?s)."
 			}]
 		}
 	},
