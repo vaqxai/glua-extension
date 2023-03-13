@@ -3,6 +3,12 @@
 	"name": "GLua",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
+			"include": "#comment-blocks"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -13,12 +19,31 @@
 		},
 		{
 			"include": "#operators"
-		},
-		{
-			"include": "#comments"
 		}
 	],
 	"repository": {
+		"comment-blocks": {
+			"patterns": [{
+				"name": "comment.block.c-style.glua",
+				"begin": "/\\*",
+				"end": "\\*/"
+			},
+			{
+				"name": "comment.block.lua-style.glua",
+				"begin": "--\\[\\[",
+				"end": "\\]\\]"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.double-dash.glua",
+				"match": "--(?!\\[\\[).*$"
+			},
+			{
+				"name": "comment.line.c-style.glua",
+				"match": "//.*$"
+			}]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.glua",
@@ -44,33 +69,11 @@
 		"operators": {
 			"patterns": [{
 				"name": "punctuation",
-				"match": "(\\(|\\)|,|\\[|\\]|\\{|\\})"
+				"match": "(\\(|\\)|,|\\[|\\](?!\\])|\\{|\\})"
 			},
 			{
 				"name": "keyword.operator",
 				"match": "(:|\\.)"
-			}]
-		},
-		"comments": {
-			"patterns": [{
-				"name": "comment.line.double-dash.glua",
-				"match": "--.*$"
-			},
-			{
-				"name": "comment.block.glua",
-				"begin": "--\\[\\[",
-				"end": "\\]\\]",
-				"match": "(?s)."
-			},
-			{
-				"name": "comment.line.c-style.glua",
-				"match": "\\/\\/.*$"
-			},
-			{
-				"name": "comment.block.c-style.glua",
-				"begin": "\\/\\*",
-				"end": "\\*\\/",
-				"match": "(?s)."
 			}]
 		}
 	},

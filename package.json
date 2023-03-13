@@ -2,7 +2,7 @@
   "name": "glua-extension",
   "displayName": "GLua Extension",
   "description": "Extending GLua with more grammars",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "publisher": "Vaqxai",
   "icon": "icon.png",
   "engines": {
@@ -21,9 +21,5 @@
         ]
       }
     ]
-  },
-  "dependencies": {
-    "vsce": "^2.15.0",
-    "vsco": "^0.0.0"
   }
 }
