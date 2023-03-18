@@ -5,6 +5,8 @@
   "version": "1.0.4",
   "publisher": "Vaqxai",
   "icon": "icon.png",
+  "repository": "https://github.com/vaqxai/glua-extension.git",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.76.0"
   },
