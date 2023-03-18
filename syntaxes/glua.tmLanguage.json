@@ -37,7 +37,7 @@
 		"comments": {
 			"patterns": [{
 				"name": "comment.line.double-dash.glua",
-				"match": "--(?!\\[\\[).*$"
+				"match": "^--[^\\]\\[]+$"
 			},
 			{
 				"name": "comment.line.c-style.glua",
